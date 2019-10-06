@@ -18,6 +18,5 @@
         * Чтобы переписки были не среди кучи диалогов вк/телеге, а в одном месте
         * Возможность запросить перенос/отмену занятия
 
-
 Начальные экраны на скриншоте ниже
-![Скриншоты экранов](https://github.com/ZubairovValeriy/TutorApp/screenshots/screenshots.png)
+![Скриншоты экранов](https://github.com/ZubairovValeriy/TutorApp/blob/master/screenshots/screenshots.png)
