@@ -14,6 +14,10 @@
 		841CAF7923491A0700046818 /* TutorApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 841CAF7723491A0700046818 /* TutorApp.xcdatamodeld */; };
 		841CAF7B23491A0A00046818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841CAF7A23491A0A00046818 /* Assets.xcassets */; };
 		841CAF7E23491A0A00046818 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841CAF7C23491A0A00046818 /* LaunchScreen.storyboard */; };
+		8441CB74235D023900BD84E6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441CB73235D023900BD84E6 /* SignInViewController.swift */; };
+		8441CB76235D027500BD84E6 /* SignUpFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441CB75235D027500BD84E6 /* SignUpFirstViewController.swift */; };
+		8441CB78235D02B300BD84E6 /* SignUpSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441CB77235D02B300BD84E6 /* SignUpSecondViewController.swift */; };
+		8441CB7A235D02E900BD84E6 /* SignUpFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441CB79235D02E900BD84E6 /* SignUpFinalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		841CAF7A23491A0A00046818 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		841CAF7D23491A0A00046818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		841CAF7F23491A0A00046818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8441CB73235D023900BD84E6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		8441CB75235D027500BD84E6 /* SignUpFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFirstViewController.swift; sourceTree = "<group>"; };
+		8441CB77235D02B300BD84E6 /* SignUpSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecondViewController.swift; sourceTree = "<group>"; };
+		8441CB79235D02E900BD84E6 /* SignUpFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFinalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +66,36 @@
 		841CAF6D23491A0700046818 /* TutorApp */ = {
 			isa = PBXGroup;
 			children = (
-				841CAF6E23491A0700046818 /* AppDelegate.swift */,
-				841CAF7023491A0700046818 /* SceneDelegate.swift */,
+				84940CCE23550E6C008029D6 /* OtherFiles */,
 				841CAF7223491A0700046818 /* ViewController.swift */,
 				841CAF7423491A0700046818 /* Main.storyboard */,
+				8441CB7C235D036A00BD84E6 /* ViewControllers */,
 				841CAF7A23491A0A00046818 /* Assets.xcassets */,
+			);
+			path = TutorApp;
+			sourceTree = "<group>";
+		};
+		8441CB7C235D036A00BD84E6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8441CB73235D023900BD84E6 /* SignInViewController.swift */,
+				8441CB79235D02E900BD84E6 /* SignUpFinalViewController.swift */,
+				8441CB77235D02B300BD84E6 /* SignUpSecondViewController.swift */,
+				8441CB75235D027500BD84E6 /* SignUpFirstViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		84940CCE23550E6C008029D6 /* OtherFiles */ = {
+			isa = PBXGroup;
+			children = (
+				841CAF6E23491A0700046818 /* AppDelegate.swift */,
+				841CAF7023491A0700046818 /* SceneDelegate.swift */,
 				841CAF7C23491A0A00046818 /* LaunchScreen.storyboard */,
 				841CAF7F23491A0A00046818 /* Info.plist */,
 				841CAF7723491A0700046818 /* TutorApp.xcdatamodeld */,
 			);
-			path = TutorApp;
+			path = OtherFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8441CB78235D02B300BD84E6 /* SignUpSecondViewController.swift in Sources */,
+				8441CB7A235D02E900BD84E6 /* SignUpFinalViewController.swift in Sources */,
 				841CAF7923491A0700046818 /* TutorApp.xcdatamodeld in Sources */,
+				8441CB76235D027500BD84E6 /* SignUpFirstViewController.swift in Sources */,
 				841CAF7323491A0700046818 /* ViewController.swift in Sources */,
 				841CAF6F23491A0700046818 /* AppDelegate.swift in Sources */,
+				8441CB74235D023900BD84E6 /* SignInViewController.swift in Sources */,
 				841CAF7123491A0700046818 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V764222368;
-				INFOPLIST_FILE = TutorApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TutorApp/OtherFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V764222368;
-				INFOPLIST_FILE = TutorApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TutorApp/OtherFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
