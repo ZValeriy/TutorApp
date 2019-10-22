@@ -9,10 +9,26 @@
 import UIKit
 import Firebase
 
+func addShadowAndBorder(to view: UIView) {
+    view.layer.cornerRadius = 10
+    view.clipsToBounds = true
+    view.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: view.layer.cornerRadius).cgPath
+    view.layer.shadowColor = view.layer.backgroundColor
+    view.layer.shadowOpacity = 0.5
+    view.layer.shadowOffset = CGSize(width: 3, height: 3)
+    view.layer.shadowRadius = 5
+    view.layer.masksToBounds = false
+}
+
 class TutorMainViewController: UIViewController {
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var settingsButton: UIButton!
+   
+    
+    @IBOutlet weak var scheduleWidget: UIView!
+    @IBOutlet weak var studentsVidget: UIView!
+    @IBOutlet weak var taskWidget: UIView!
     
     @IBOutlet weak var quitButton: UIButton!
     override func viewDidLoad() {
@@ -29,6 +45,10 @@ class TutorMainViewController: UIViewController {
         profileView.layer.shadowOffset = CGSize(width: 5, height: 5)
         profileView.layer.shadowRadius = 5
         profileView.layer.masksToBounds = false
+        
+        addShadowAndBorder(to: taskWidget)
+        addShadowAndBorder(to: studentsVidget)
+        addShadowAndBorder(to: scheduleWidget)
     }
     
     @IBAction func quitApp(_ sender: Any) {
@@ -38,6 +58,11 @@ class TutorMainViewController: UIViewController {
         } catch let signOutError as NSError {
           print ("Error signing out: %@", signOutError)
         }
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainViewController = storyBoard.instantiateViewController(withIdentifier: "main") as! ViewController
+        mainViewController.modalPresentationStyle = .fullScreen
+        self.present(mainViewController, animated: true, completion: nil)
     }
     
     /*

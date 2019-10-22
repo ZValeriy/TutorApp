@@ -28,21 +28,19 @@ class SignInViewController: UIViewController {
     
     @IBAction func login(_ sender: UIButton) {
         activityIndicator.startAnimating()
-        print("Попытка авторизации")
-        print(loginField.text!)
-        print(passwordField.text!)
+
         Auth.auth().signIn(withEmail: loginField.text!, password: passwordField.text!) { [weak self] authResult, error in
             if error != nil {
                 print(error ?? "Ошибка")
                 
             } else {
-            
-            guard self != nil else { return }
-            
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let tutorMainViewController = storyBoard.instantiateViewController(withIdentifier: "tutorMain") as! TutorMainViewController
+                guard self != nil else { return }
                 
-            self?.present(tutorMainViewController, animated: true, completion: nil)
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let tutorMainViewController = storyBoard.instantiateViewController(withIdentifier: "tutorMain") as! TutorMainViewController
+                self?.activityIndicator.stopAnimating()
+                tutorMainViewController.modalPresentationStyle = .fullScreen
+                self?.present(tutorMainViewController, animated: true, completion: nil)
             }
         }
     }
