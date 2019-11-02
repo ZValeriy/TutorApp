@@ -7,27 +7,64 @@
 //
 
 import UIKit
+import Firebase
+
 
 class SignUpFinalViewController: UIViewController {
 
+    var signUpUser: SignUpUser?
+    var ref: DatabaseReference!
+    
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.stopAnimating()
+        ref = Database.database().reference()
 
         let font = UIFont.systemFont(ofSize: 20)
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
-        // Do any additional setup after loading the view.
-    }
+        
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+    @IBAction func signUp(_ sender: Any) {
+        var isTeacher = false
+        if segmentedControl.selectedSegmentIndex == 0 {
+            isTeacher = true
+        }
+        
+        signUpUser?.setIsTeacher(with: isTeacher)
+        
+        activityIndicator.startAnimating()
+        Auth.auth().createUser(withEmail: (signUpUser?.getEmail()!)!, password: (signUpUser?.getPassword()!)!) { authResult, error in
+            
+            if error != nil {
+                print(error ?? "ОШИБКА РЕГИСТРАЦИИ")
+            } else {
+                guard self != nil else { return }
+                
+                self.activityIndicator.stopAnimating()
+                let user = Auth.auth().currentUser
+                if let user = user {
+                    let uid = user.uid
+                    
+                    self.ref.child("users").child(uid).setValue(["isTeacher": self.signUpUser?.getIsTeacher()])
+                }
+                
+                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                changeRequest?.displayName = self.signUpUser?.getName()
+                changeRequest?.commitChanges { (error) in
+                  // ...
+                }
+                    
+
+                
+            }
+            
+            
+        }
+        
+    }
 
 }
