@@ -18,7 +18,6 @@
 		8441CB76235D027500BD84E6 /* SignUpFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441CB75235D027500BD84E6 /* SignUpFirstViewController.swift */; };
 		8441CB78235D02B300BD84E6 /* SignUpSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441CB77235D02B300BD84E6 /* SignUpSecondViewController.swift */; };
 		8441CB7A235D02E900BD84E6 /* SignUpFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441CB79235D02E900BD84E6 /* SignUpFinalViewController.swift */; };
-		8446AFAB235E5E17006F1FD5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446AFAA235E5E17006F1FD5 /* Constants.swift */; };
 		84AC3885236DFDC400B0AE33 /* signUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC3884236DFDC400B0AE33 /* signUpModel.swift */; };
 		84AC3887236E0A1C00B0AE33 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC3886236E0A1C00B0AE33 /* Validator.swift */; };
 		84D204EA235DC54500FD89F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84D204E9235DC54500FD89F0 /* GoogleService-Info.plist */; };
@@ -44,7 +43,6 @@
 		8441CB75235D027500BD84E6 /* SignUpFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFirstViewController.swift; sourceTree = "<group>"; };
 		8441CB77235D02B300BD84E6 /* SignUpSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecondViewController.swift; sourceTree = "<group>"; };
 		8441CB79235D02E900BD84E6 /* SignUpFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFinalViewController.swift; sourceTree = "<group>"; };
-		8446AFAA235E5E17006F1FD5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		84AC3884236DFDC400B0AE33 /* signUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpModel.swift; sourceTree = "<group>"; };
 		84AC3886236E0A1C00B0AE33 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		84D204E9235DC54500FD89F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -85,30 +83,77 @@
 		841CAF6D23491A0700046818 /* TutorApp */ = {
 			isa = PBXGroup;
 			children = (
+				845AB3EC236E2FF1006A9491 /* Models */,
 				84D204E9235DC54500FD89F0 /* GoogleService-Info.plist */,
 				84940CCE23550E6C008029D6 /* OtherFiles */,
-				841CAF7223491A0700046818 /* ViewController.swift */,
 				841CAF7423491A0700046818 /* Main.storyboard */,
-				84AC3884236DFDC400B0AE33 /* signUpModel.swift */,
 				84AC3886236E0A1C00B0AE33 /* Validator.swift */,
-				8441CB7C235D036A00BD84E6 /* ViewControllers */,
+				845AB3E4236E2F19006A9491 /* ViewControllers */,
 				841CAF7A23491A0A00046818 /* Assets.xcassets */,
 			);
 			path = TutorApp;
 			sourceTree = "<group>";
 		};
-		8441CB7C235D036A00BD84E6 /* ViewControllers */ = {
+		845AB3E4236E2F19006A9491 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8441CB73235D023900BD84E6 /* SignInViewController.swift */,
-				84FE61DF235F6AF800AB7A01 /* TutorMainViewController.swift */,
-				8446AFAA235E5E17006F1FD5 /* Constants.swift */,
+				845AB3EB236E2FD6006A9491 /* First */,
+				845AB3EA236E2FC7006A9491 /* Settings */,
+				845AB3E9236E2FAE006A9491 /* Tutor */,
+				845AB3E7236E2F99006A9491 /* SignIn */,
+				845AB3E6236E2F7E006A9491 /* SignUp */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		845AB3E6236E2F7E006A9491 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
 				8441CB79235D02E900BD84E6 /* SignUpFinalViewController.swift */,
-				84FE61E1235F73E700AB7A01 /* SettingsViewController.swift */,
 				8441CB77235D02B300BD84E6 /* SignUpSecondViewController.swift */,
 				8441CB75235D027500BD84E6 /* SignUpFirstViewController.swift */,
 			);
-			name = ViewControllers;
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		845AB3E7236E2F99006A9491 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				8441CB73235D023900BD84E6 /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		845AB3E9236E2FAE006A9491 /* Tutor */ = {
+			isa = PBXGroup;
+			children = (
+				84FE61DF235F6AF800AB7A01 /* TutorMainViewController.swift */,
+			);
+			path = Tutor;
+			sourceTree = "<group>";
+		};
+		845AB3EA236E2FC7006A9491 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				84FE61E1235F73E700AB7A01 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		845AB3EB236E2FD6006A9491 /* First */ = {
+			isa = PBXGroup;
+			children = (
+				841CAF7223491A0700046818 /* ViewController.swift */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		845AB3EC236E2FF1006A9491 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84AC3884236DFDC400B0AE33 /* signUpModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		84940CCE23550E6C008029D6 /* OtherFiles */ = {
@@ -268,7 +313,6 @@
 				841CAF6F23491A0700046818 /* AppDelegate.swift in Sources */,
 				8441CB74235D023900BD84E6 /* SignInViewController.swift in Sources */,
 				841CAF7123491A0700046818 /* SceneDelegate.swift in Sources */,
-				8446AFAB235E5E17006F1FD5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
