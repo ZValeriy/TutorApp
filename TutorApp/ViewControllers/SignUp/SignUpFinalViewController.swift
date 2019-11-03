@@ -48,7 +48,7 @@ class SignUpFinalViewController: UIViewController {
                 let user = Auth.auth().currentUser
                 if let user = user {
                     let uid = user.uid
-                    
+                
                     self.ref.child("users").child(uid).setValue(["isTeacher": self.signUpUser?.getIsTeacher()])
                 }
                 
@@ -57,7 +57,22 @@ class SignUpFinalViewController: UIViewController {
                 changeRequest?.commitChanges { (error) in
                   // ...
                 }
-                    
+                
+                
+                
+                if (self.signUpUser?.getIsTeacher())! {
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let tutorMainViewController = storyBoard.instantiateViewController(withIdentifier: "tutorMain") as! TutorMainViewController
+                    self.activityIndicator.stopAnimating()
+                    tutorMainViewController.modalPresentationStyle = .fullScreen
+                    self.present(tutorMainViewController, animated: true, completion: nil)
+                } else {
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let studentMainViewController = storyBoard.instantiateViewController(withIdentifier: "studentMain") as! StudentMainViewController
+                    self.activityIndicator.stopAnimating()
+                    studentMainViewController.modalPresentationStyle = .fullScreen
+                    self.present(studentMainViewController, animated: true, completion: nil)
+                }
 
                 
             }

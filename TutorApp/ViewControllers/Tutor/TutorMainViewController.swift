@@ -21,6 +21,7 @@ func addShadowAndBorder(to view: UIView) {
 }
 
 class TutorMainViewController: UIViewController {
+    @IBOutlet weak var helloTitle: UILabel!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var settingsButton: UIButton!
@@ -33,6 +34,13 @@ class TutorMainViewController: UIViewController {
     @IBOutlet weak var quitButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let user = Auth.auth().currentUser
+        if let user = user {
+            let name = user.displayName
+            
+            helloTitle.text = "Привет, \(name?.split(separator: " ")[0] ?? "")"
+        }
         
         profileImage.layer.cornerRadius = profileImage.bounds.width / 2
         profileImage.clipsToBounds = true

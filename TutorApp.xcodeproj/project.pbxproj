@@ -18,6 +18,7 @@
 		8441CB76235D027500BD84E6 /* SignUpFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441CB75235D027500BD84E6 /* SignUpFirstViewController.swift */; };
 		8441CB78235D02B300BD84E6 /* SignUpSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441CB77235D02B300BD84E6 /* SignUpSecondViewController.swift */; };
 		8441CB7A235D02E900BD84E6 /* SignUpFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441CB79235D02E900BD84E6 /* SignUpFinalViewController.swift */; };
+		84708AF0236ED331000489D2 /* StudentMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84708AEF236ED331000489D2 /* StudentMainViewController.swift */; };
 		84AC3885236DFDC400B0AE33 /* signUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC3884236DFDC400B0AE33 /* signUpModel.swift */; };
 		84AC3887236E0A1C00B0AE33 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC3886236E0A1C00B0AE33 /* Validator.swift */; };
 		84D204EA235DC54500FD89F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84D204E9235DC54500FD89F0 /* GoogleService-Info.plist */; };
@@ -43,6 +44,7 @@
 		8441CB75235D027500BD84E6 /* SignUpFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFirstViewController.swift; sourceTree = "<group>"; };
 		8441CB77235D02B300BD84E6 /* SignUpSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecondViewController.swift; sourceTree = "<group>"; };
 		8441CB79235D02E900BD84E6 /* SignUpFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFinalViewController.swift; sourceTree = "<group>"; };
+		84708AEF236ED331000489D2 /* StudentMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMainViewController.swift; sourceTree = "<group>"; };
 		84AC3884236DFDC400B0AE33 /* signUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpModel.swift; sourceTree = "<group>"; };
 		84AC3886236E0A1C00B0AE33 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		84D204E9235DC54500FD89F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		845AB3E4236E2F19006A9491 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84708AEE236ED302000489D2 /* Student */,
 				845AB3EB236E2FD6006A9491 /* First */,
 				845AB3EA236E2FC7006A9491 /* Settings */,
 				845AB3E9236E2FAE006A9491 /* Tutor */,
@@ -154,6 +157,14 @@
 				84AC3884236DFDC400B0AE33 /* signUpModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		84708AEE236ED302000489D2 /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				84708AEF236ED331000489D2 /* StudentMainViewController.swift */,
+			);
+			path = Student;
 			sourceTree = "<group>";
 		};
 		84940CCE23550E6C008029D6 /* OtherFiles */ = {
@@ -304,6 +315,7 @@
 				8441CB78235D02B300BD84E6 /* SignUpSecondViewController.swift in Sources */,
 				8441CB7A235D02E900BD84E6 /* SignUpFinalViewController.swift in Sources */,
 				84FE61E2235F73E700AB7A01 /* SettingsViewController.swift in Sources */,
+				84708AF0236ED331000489D2 /* StudentMainViewController.swift in Sources */,
 				841CAF7923491A0700046818 /* TutorApp.xcdatamodeld in Sources */,
 				84AC3887236E0A1C00B0AE33 /* Validator.swift in Sources */,
 				8441CB76235D027500BD84E6 /* SignUpFirstViewController.swift in Sources */,
