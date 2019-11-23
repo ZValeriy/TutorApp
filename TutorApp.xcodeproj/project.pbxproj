@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84055FB72386C7D1007C832A /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84055FB62386C7D1007C832A /* StudentTableViewCell.swift */; };
 		841CAF6F23491A0700046818 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CAF6E23491A0700046818 /* AppDelegate.swift */; };
 		841CAF7123491A0700046818 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CAF7023491A0700046818 /* SceneDelegate.swift */; };
 		841CAF7323491A0700046818 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CAF7223491A0700046818 /* ViewController.swift */; };
@@ -18,12 +19,14 @@
 		8441CB76235D027500BD84E6 /* SignUpFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441CB75235D027500BD84E6 /* SignUpFirstViewController.swift */; };
 		8441CB78235D02B300BD84E6 /* SignUpSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441CB77235D02B300BD84E6 /* SignUpSecondViewController.swift */; };
 		8441CB7A235D02E900BD84E6 /* SignUpFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441CB79235D02E900BD84E6 /* SignUpFinalViewController.swift */; };
+		844E71372389DAAE000B3D7A /* StudentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E71362389DAAE000B3D7A /* StudentsTableViewController.swift */; };
 		84708AF0236ED331000489D2 /* StudentMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84708AEF236ED331000489D2 /* StudentMainViewController.swift */; };
 		84AC3885236DFDC400B0AE33 /* signUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC3884236DFDC400B0AE33 /* signUpModel.swift */; };
 		84AC3887236E0A1C00B0AE33 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC3886236E0A1C00B0AE33 /* Validator.swift */; };
 		84D204EA235DC54500FD89F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84D204E9235DC54500FD89F0 /* GoogleService-Info.plist */; };
 		84FE61E0235F6AF800AB7A01 /* TutorMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE61DF235F6AF800AB7A01 /* TutorMainViewController.swift */; };
 		84FE61E2235F73E700AB7A01 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE61E1235F73E700AB7A01 /* SettingsViewController.swift */; };
+		84FF041F2386D7EA00E07B62 /* StudentTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444793A2386CF5000C2FF6A /* StudentTable.swift */; };
 		8FE79E106156950EE323022F /* Pods_TutorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF5C4DC3E3B6B928F9665F6 /* Pods_TutorApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +34,7 @@
 		4EF5C4DC3E3B6B928F9665F6 /* Pods_TutorApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TutorApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5030746C3DDC41F517BD779B /* Pods-TutorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutorApp.debug.xcconfig"; path = "Target Support Files/Pods-TutorApp/Pods-TutorApp.debug.xcconfig"; sourceTree = "<group>"; };
 		6054998157FA480C6151745C /* Pods-TutorApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutorApp.release.xcconfig"; path = "Target Support Files/Pods-TutorApp/Pods-TutorApp.release.xcconfig"; sourceTree = "<group>"; };
+		84055FB62386C7D1007C832A /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
 		841CAF6B23491A0700046818 /* TutorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841CAF6E23491A0700046818 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		841CAF7023491A0700046818 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +48,8 @@
 		8441CB75235D027500BD84E6 /* SignUpFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFirstViewController.swift; sourceTree = "<group>"; };
 		8441CB77235D02B300BD84E6 /* SignUpSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecondViewController.swift; sourceTree = "<group>"; };
 		8441CB79235D02E900BD84E6 /* SignUpFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFinalViewController.swift; sourceTree = "<group>"; };
+		8444793A2386CF5000C2FF6A /* StudentTable.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = StudentTable.swift; path = TutorApp/ViewControllers/StudentTable.swift; sourceTree = SOURCE_ROOT; };
+		844E71362389DAAE000B3D7A /* StudentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTableViewController.swift; sourceTree = "<group>"; };
 		84708AEF236ED331000489D2 /* StudentMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMainViewController.swift; sourceTree = "<group>"; };
 		84AC3884236DFDC400B0AE33 /* signUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpModel.swift; sourceTree = "<group>"; };
 		84AC3886236E0A1C00B0AE33 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
@@ -99,12 +105,14 @@
 		845AB3E4236E2F19006A9491 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84055FB62386C7D1007C832A /* StudentTableViewCell.swift */,
 				84708AEE236ED302000489D2 /* Student */,
 				845AB3EB236E2FD6006A9491 /* First */,
 				845AB3EA236E2FC7006A9491 /* Settings */,
 				845AB3E9236E2FAE006A9491 /* Tutor */,
 				845AB3E7236E2F99006A9491 /* SignIn */,
 				845AB3E6236E2F7E006A9491 /* SignUp */,
+				844E71362389DAAE000B3D7A /* StudentsTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 		845AB3EC236E2FF1006A9491 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8444793A2386CF5000C2FF6A /* StudentTable.swift */,
 				84AC3884236DFDC400B0AE33 /* signUpModel.swift */,
 			);
 			path = Models;
@@ -317,7 +326,9 @@
 				84FE61E2235F73E700AB7A01 /* SettingsViewController.swift in Sources */,
 				84708AF0236ED331000489D2 /* StudentMainViewController.swift in Sources */,
 				841CAF7923491A0700046818 /* TutorApp.xcdatamodeld in Sources */,
+				84FF041F2386D7EA00E07B62 /* StudentTable.swift in Sources */,
 				84AC3887236E0A1C00B0AE33 /* Validator.swift in Sources */,
+				844E71372389DAAE000B3D7A /* StudentsTableViewController.swift in Sources */,
 				8441CB76235D027500BD84E6 /* SignUpFirstViewController.swift in Sources */,
 				84FE61E0235F6AF800AB7A01 /* TutorMainViewController.swift in Sources */,
 				841CAF7323491A0700046818 /* ViewController.swift in Sources */,
@@ -325,6 +336,7 @@
 				841CAF6F23491A0700046818 /* AppDelegate.swift in Sources */,
 				8441CB74235D023900BD84E6 /* SignInViewController.swift in Sources */,
 				841CAF7123491A0700046818 /* SceneDelegate.swift in Sources */,
+				84055FB72386C7D1007C832A /* StudentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +488,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.TutorApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TutorApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -495,7 +507,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.TutorApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TutorApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

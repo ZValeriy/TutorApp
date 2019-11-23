@@ -9,4 +9,7 @@ target 'TutorApp' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'FirebaseUI/Storage'
+  pod 'RSKImageCropper'
 end

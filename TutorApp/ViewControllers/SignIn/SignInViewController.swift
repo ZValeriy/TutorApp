@@ -46,22 +46,23 @@ class SignInViewController: UIViewController {
                     self?.ref.child("users").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in
                       let value = snapshot.value as? NSDictionary
                       isTeacher = value?["isTeacher"] as? Bool ?? false
+                        if isTeacher {
+                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                            let tutorMainViewController = storyBoard.instantiateViewController(withIdentifier: "tutorMain") as! TutorMainViewController
+                            tutorMainViewController.modalPresentationStyle = .fullScreen
+                            self?.present(tutorMainViewController, animated: true, completion: nil)
+                        } else {
+                            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                            let studentMainViewController = storyBoard.instantiateViewController(withIdentifier: "studentMain") as! StudentMainViewController
+                            studentMainViewController.modalPresentationStyle = .fullScreen
+                            self?.present(studentMainViewController, animated: true, completion: nil)
+                        }
                       }) { (error) in
                         print(error.localizedDescription)
                     }
                 }
                 
-                if isTeacher {
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let tutorMainViewController = storyBoard.instantiateViewController(withIdentifier: "tutorMain") as! TutorMainViewController
-                    tutorMainViewController.modalPresentationStyle = .fullScreen
-                    self?.present(tutorMainViewController, animated: true, completion: nil)
-                } else {
-                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let studentMainViewController = storyBoard.instantiateViewController(withIdentifier: "studentMain") as! StudentMainViewController
-                    studentMainViewController.modalPresentationStyle = .fullScreen
-                    self?.present(studentMainViewController, animated: true, completion: nil)
-                }
+                
             }
         }
     }

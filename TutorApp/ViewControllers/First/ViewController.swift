@@ -18,32 +18,29 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let user = Auth.auth().currentUser
-        var isTeacher = false
-        if let user = user {
-            print(user.uid)
-            ref = Database.database().reference()
-            ref.child("users").child(user.uid).observeSingleEvent(of: .value, with: { (snapshot) in
-              let value = snapshot.value as? NSDictionary
-              isTeacher = value?["isTeacher"] as? Bool ?? false
-              print(value)
-                print(isTeacher)
-              }) { (error) in
-                print(error.localizedDescription)
-            }
-        }
-        
-        if isTeacher {
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let tutorMainViewController = storyBoard.instantiateViewController(withIdentifier: "tutorMain") as! TutorMainViewController
-                tutorMainViewController.modalPresentationStyle = .fullScreen
-                self.present(tutorMainViewController, animated: true, completion: nil)
-            } else {
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let studentMainViewController = storyBoard.instantiateViewController(withIdentifier: "studentMain") as! StudentMainViewController
-                studentMainViewController.modalPresentationStyle = .fullScreen
-                self.present(studentMainViewController, animated: true, completion: nil)
-            }
+//        let user = Auth.auth().currentUser
+//        var isTeacher = false
+//        if let user = user {
+//
+//            ref = Database.database().reference()
+//            ref.child("users").child(user.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+//              let value = snapshot.value as? NSDictionary
+//              isTeacher = value?["isTeacher"] as? Bool ?? false
+//                if isTeacher {
+//                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                    let tutorMainViewController = storyBoard.instantiateViewController(withIdentifier: "tutorMain") as! TutorMainViewController
+//                    tutorMainViewController.modalPresentationStyle = .fullScreen
+//                    self.present(tutorMainViewController, animated: true, completion: nil)
+//                } else {
+//                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                    let studentMainViewController = storyBoard.instantiateViewController(withIdentifier: "studentMain") as! StudentMainViewController
+//                    studentMainViewController.modalPresentationStyle = .fullScreen
+//                    self.present(studentMainViewController, animated: true, completion: nil)
+//                }
+//              }) { (error) in
+//                print(error.localizedDescription)
+//            }
+//        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()

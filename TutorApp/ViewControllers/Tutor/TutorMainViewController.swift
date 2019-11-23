@@ -21,6 +21,9 @@ func addShadowAndBorder(to view: UIView) {
 }
 
 class TutorMainViewController: UIViewController {
+    
+    
+    
     @IBOutlet weak var helloTitle: UILabel!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
@@ -32,15 +35,13 @@ class TutorMainViewController: UIViewController {
     @IBOutlet weak var taskWidget: UIView!
     
     @IBOutlet weak var quitButton: UIButton!
+    
+    var user = Auth.auth().currentUser
+            
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let user = Auth.auth().currentUser
-        if let user = user {
-            let name = user.displayName
-            
-            helloTitle.text = "Привет, \(name?.split(separator: " ")[0] ?? "")"
-        }
         
         profileImage.layer.cornerRadius = profileImage.bounds.width / 2
         profileImage.clipsToBounds = true
@@ -57,6 +58,28 @@ class TutorMainViewController: UIViewController {
         addShadowAndBorder(to: taskWidget)
         addShadowAndBorder(to: studentsVidget)
         addShadowAndBorder(to: scheduleWidget)
+        
+        let storage = Storage.storage()
+        if let photoUrl = user?.photoURL {
+            let httpsReference = storage.reference(forURL: photoUrl.absoluteString)
+            print(photoUrl)
+            httpsReference.getData(maxSize: 20 * 1024 * 1024) { data, error in
+              if let error = error {
+                print(error)
+              } else {
+                let image = UIImage(data: data!)
+                self.profileImage.image = image
+                print("image")
+              }
+            }
+        }
+        
+    }
+    @IBAction func refresh(_ sender: Any) {
+        user = Auth.auth().currentUser
+        if let user = user {
+            print(user.photoURL!)
+        }
     }
     
     @IBAction func quitApp(_ sender: Any) {
